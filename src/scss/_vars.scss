@@ -1,0 +1,49 @@
+$text-base-color: #ffffff;
+$grey-color: #515151;
+
+@mixin century-gothic-normal {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+}
+
+@mixin century-gothic-italic {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin century-gothic-bold {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 700;
+}
+
+@mixin century-gothic-bold-italic {
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin montserrat-normal {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+}
+
+@mixin montserrat-medium {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+
+@mixin montserrat-semibold {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+
+@mixin montserrat-bold {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+@mixin montserrat-light {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+}

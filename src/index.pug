@@ -1,0 +1,56 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv="X-UA-Compatible",content="IE=edge")
+        meta(name="viewport",content="width=device-width, initial-scale=1.0")
+        title Марафон
+        link(rel="stylesheet",href="css/normalize.css")
+        link(rel="stylesheet",href="css/style.css")
+        link(rel="preconnect",href="https://fonts.googleapis.com")
+        link(rel="preconnect",href="https://fonts.gstatic.com",crossorigin)
+        link(rel="stylesheet",href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap")
+    body
+        header.header
+            .header__title Авторский онлайн-марафон<br/><span>по ПДД Республики Казахстан</span>
+            .header__logo-rect 
+                img.header__logo.logo(src="images/logo.png",alt="Логотип школы вождения Автоонлайн",width="202",height="53")
+            .header__start-time 20 мая / 20:00<br/><span>Начало марафона</span>    
+        main.main
+            section.intro
+                .intro__container                    
+                    h1.intro__title изучи ПДД за 7 дней<br/><span>по понятным видео-урокам,</span>
+                    p.intro__subtitle и получи возможность <span>выиграть денежные призы</span>
+                    .intro__rect
+                        p.intro__rect-text Обучение проходит онлайн в нашем сервисе видео-уроков.
+                    .intro__row
+                        a.intro__btn-join(href="#")
+                            p.intro__btn-join-text участвовать
+                        .intro__row-text-container
+                            p.intro__row-text Участие в марафоне<br/>абсолютно <span>бесплатно</span>    
+                            p.intro__row-discount &nbsp;15 000₸&nbsp;
+                    img.intro__sign2-img(src="images/novice-sign.png", alt="Заблюреный декоративный знак ученик", width="113", height="99")
+                img.intro__sign-img(src="images/road-sign.png", alt="Заблюреный декоративный дорожный знак", width="220", height="220")
+            section.tasks
+                .container
+                    h2.tasks__title Выполняй задания на марафоне
+                    p.tasks__subtitle и получи крупные денежные призы и подарки!
+                    ul.tasks__step-list
+                        li.tasks__step-item
+                            p.tasks__step-num 01
+                            img.tasks__step-img(src="", alt="")
+                            p.tasks__step-text Смотри каждый день видеоуроки на нашем сайте
+                        li.tasks__step-item 
+                            p.tasks__step-num 02
+                            img.tasks__step-img(src="", alt="")
+                            p.tasks__step-text Делай домашние задания и отправляй нам                       
+                        li.tasks__step-item
+                            p.tasks__step-num 03
+                            img.tasks__step-img(src="", alt="")
+                            p.tasks__step-text Самые активные марафонцы получат крупные денежные призы и подарки 
+            section.about 
+            section.you-get 
+            section.faq 
+            section.join-us
+
+        footer.footer
