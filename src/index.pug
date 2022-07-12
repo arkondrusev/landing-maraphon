@@ -36,19 +36,41 @@ html(lang='ru')
                     h2.tasks__title Выполняй задания на марафоне
                     p.tasks__subtitle и получи крупные денежные призы и подарки!
                     ul.tasks__step-list
-                        li.tasks__step-item
-                            p.tasks__step-num 01
-                            img.tasks__step-img(src="", alt="")
+                        li.tasks__step-item.tasks-step-1
+                            div.tasks__step-num-container
+                                p.tasks__step-num 01
+                            //- img.tasks__step-img(src="images/tasks-img-1.png", alt="Ноутбук и смартфон", width="179", height="98")
                             p.tasks__step-text Смотри каждый день видеоуроки на нашем сайте
-                        li.tasks__step-item 
-                            p.tasks__step-num 02
-                            img.tasks__step-img(src="", alt="")
+                        li.tasks__step-item.tasks-step-2 
+                            div.tasks__step-num-container
+                                p.tasks__step-num 02
+                            //- img.tasks__step-img(src="images/tasks-img-2.png", alt="Блокноты", width="124", height="128")
                             p.tasks__step-text Делай домашние задания и отправляй нам                       
-                        li.tasks__step-item
-                            p.tasks__step-num 03
-                            img.tasks__step-img(src="", alt="")
+                        li.tasks__step-item.tasks-step-3
+                            div.tasks__step-num-container
+                                p.tasks__step-num 03
+                            //- img.tasks__step-img(src="images/tasks-img-3.png", alt="Гаджеты, деньги, подарки", width="181", height="132")
                             p.tasks__step-text Самые активные марафонцы получат крупные денежные призы и подарки 
-            section.about 
+            section.about
+                .container
+                    .about__col-1
+                        .about__col-1-header
+                            h2.about__col-1-header-title Узнай о нас
+                            p.about__col-1-header-subtitle немного больше...
+                        .about__col-1-frame
+                            h3.about__col-1-frame-title-1
+                            p.about__col-1-frame-text-1
+                            h3.about__col-1-frame-title-2
+                            p.about__col-1-frame-text-2
+                            p.about__col-1-frame-text-3
+                        .about__col-1-frame-mission
+                            h3.about__col-1-frame-mission-title
+                            p.about__col-1-frame-misstion-text
+                    .about__col-2
+                        img.about__col-2-img-notebook
+                        .about__col-2-video
+                            p.about__col-2-video-text
+                            img.about__col-2-video-button
             section.you-get 
             section.faq 
             section.join-us
