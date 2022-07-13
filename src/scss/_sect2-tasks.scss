@@ -17,17 +17,7 @@
         height: 800px;
     }
 
-    &__title {
-        @include montserrat-bold;
-        font-size: 36px;
-        line-height: 44px;
-        text-transform: uppercase;
-    }
-
     &__subtitle {
-        @include montserrat-light;
-        font-size: 26px;
-        line-height: 32px;
         margin-bottom: 58px;
     }
 

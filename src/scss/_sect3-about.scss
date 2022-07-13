@@ -3,4 +3,78 @@
     max-width: 1920px;
     width: 100%;
     height: 940px;
+
+    &__col-1 {
+        padding-top: 130px;
+
+        &-header {
+            margin-bottom: 58px;
+
+            &-title {
+                position: relative;
+                left: -20px;
+            }
+
+            &-subtitle {
+                position: relative;
+                left: 75px;
+            }
+        }
+
+        &-frame {
+            width: 525px;
+            border: solid #343434 1px;
+            border-radius: 10px;
+            padding: 31px 45px 58px 27px;
+            position: relative;
+
+            &::before {
+                content: "";
+                background: url("../images/about-keys.png") no-repeat center;
+                width: 128px;
+                height: 76px;
+                position: absolute;
+                left: -80px;
+                top: -7px;
+                transform: rotate(-27deg);
+                filter: blur(3px);
+            }
+
+            &-title {
+                @include century-gothic-bold-italic;
+                font-size: 20px;
+                line-height: 24px;
+                text-transform: uppercase;
+            }
+
+            &-title-1 {
+                margin-bottom: 20px;
+            }
+
+            &-text {
+                @include century-gothic-normal;
+                font-size: 14px;
+                line-height: 18px;
+
+                & span {
+                    @include century-gothic-bold
+                }
+            }
+
+            &-text-1 {
+                margin-bottom: 60px;
+            }
+
+            &-title-2 {
+                margin-bottom: 20px;
+            }
+
+        &-mission {
+            width: 542px;
+            height: 117px;
+            background: linear-gradient(89.85deg, rgba(147, 208, 252, 0.3) 0.1%, rgba(210, 166, 255, 0.3) 95.31%);
+        }
+       }
+    }
+
 }

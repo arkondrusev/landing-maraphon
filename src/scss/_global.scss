@@ -8,3 +8,18 @@ body {
     max-width: 1600px;
     margin: 0 15%;
 }
+
+// mixins
+
+.section-title {
+    @include montserrat-bold;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    @include montserrat-light;
+    font-size: 26px;
+    line-height: 32px;
+}
