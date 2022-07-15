@@ -3,4 +3,89 @@
     max-width: 1920px;
     width: 100%;
     height: 1000px;
+    padding-top: 130px;
+
+    &__header-title {
+        text-align: center;
+    }
+
+    &__header-subtitle {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__to-exam {
+        text-align: center;
+        @include century-gothic-normal;
+        font-size: 17px;
+        line-height: 20px;
+        width: 700px;
+        margin: 0 auto 134px;
+        text-transform: uppercase;
+    }
+
+    &__categories {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-a {
+            position: relative;
+            margin-right: 60px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url("../images/road-sign.png") no-repeat center/cover;
+                width: 144px;
+                height: 144px;
+                filter: blur(3px);
+                bottom: 0;
+                left: 0;
+                transform: translate(-45%, 30%) rotate(-20deg);
+            }
+        }
+
+        &-b {
+            position: relative;
+            top: 80px;
+            margin-right: 60px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url("../images/you-get-wheel.png") no-repeat center;
+                width: 135px;
+                height: 167px;
+                filter: blur(4px);
+                top: 0;
+                right: 0;
+                transform: translate(40%, -35%);
+            }
+        }
+    }
+
+    &__category {
+        background-color: #E1E1E1;
+        border-radius: 11px;
+        width: 460px;
+        color: #4B4B4B;
+        padding: 22px 62px 16px;
+    }
+
+    &__categories-title {
+        @include century-gothic-bold-italic;
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    &__categories-list-item {
+        @include century-gothic-normal;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 18px;
+    }
+
 }
