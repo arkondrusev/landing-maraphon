@@ -10,14 +10,16 @@ const srcDir = 'src';
 const buildDir = 'build';
 
 const pugPath = srcDir + '/index.pug';
-const fontSrcPath = srcDir + '/fonts/*';
-const imgSrcPath = srcDir + '/images/*';
 const sassPath = srcDir + '/scss/*';
 
-const htmlPath = buildDir + '/index.html';
-const fontDestPath = buildDir + '/fonts';
-const imgDestPath = buildDir + '/images';
-const cssPath = buildDir + '/css';
+const cssDestPath = buildDir + '/css';
+
+const copyPaths = new Map([
+  [srcDir + '/css/*',buildDir + '/css'],
+  [srcDir + '/fonts/*',buildDir + '/fonts'],
+  [srcDir + '/images/*',buildDir + '/images'],
+  [srcDir + '/js/*',buildDir + '/js']
+]);
 
 function clean(cb) {
   try {
@@ -50,7 +52,7 @@ function sassCompile(cb) {
   try {
     src(sassPath)
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest(cssPath));
+    .pipe(dest(cssDestPath));
     cb();
   } catch (e) {
     cb(e);
@@ -79,40 +81,28 @@ function syncBrowser(cb) {
   cb();
 }
 
-function copyImages(cb) {
-  src(imgSrcPath)
-    .pipe(dest(imgDestPath));
-  cb();
+function copyDirContent(source, target) {
+  src(source)
+    .pipe(dest(target));
 }
 
-function watchImagesSync(cb) {
-  watch(imgSrcPath,
-    {ignoreInitial: false},
-    copyImages
-  );
-  cb();
-}
-
-function copyFonts(cb) {
-  src(fontSrcPath)
-    .pipe(dest(fontDestPath));
-  cb();
-}
-
-function watchFontsSync(cb) {
-  watch(fontSrcPath,
-    {ignoreInitial: false},
-    copyFonts
-  );
-  cb();
+function watchPaths() {
+  for (const key of copyPaths.keys()) {
+    watch(key,
+      {ignoreInitial: false},
+      function(cb) {
+        copyDirContent(key, copyPaths.get(key))
+        cb();
+      }
+    );
+  }
 }
 
 exports.default =
   series(clean,
     watchPugCompile,
     watchSassCompile,
-    watchImagesSync,
-    watchFontsSync,
+    watchPaths,
     startServer,
     syncBrowser
   );
