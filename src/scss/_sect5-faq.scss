@@ -70,6 +70,11 @@
     color: black;
 }
 
+.faq__accordion {
+    position: relative;
+    z-index: 1;
+}
+
 .faq__accordion-title {
     position: relative;
 }
