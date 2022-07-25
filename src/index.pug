@@ -6,14 +6,13 @@ html(lang='ru')
         meta(name="viewport",content="width=device-width, initial-scale=1.0")
         title Марафон
         link(rel="stylesheet",href="css/normalize.css")
-        link(rel="stylesheet",href="css/jquery-ui.css")
         link(rel="stylesheet",href="css/jquery-ui.structure.css")
         link(rel="stylesheet",href="css/jquery-ui.theme.css")
         link(rel="stylesheet",href="css/style.css")
         link(rel="preconnect",href="https://fonts.googleapis.com")
         link(rel="preconnect",href="https://fonts.gstatic.com",crossorigin)
         link(rel="stylesheet",href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap")
-        script(type="text/javascript", src="js/jquery-3.6.0.slim.js")
+        script(type="text/javascript", src="js/jquery-3.6.0.js")
         script(type="text/javascript", src="js/jquery-ui.js")
     body
         header.header
@@ -91,11 +90,27 @@ html(lang='ru')
                                 li.you-get__categories-list-item - Категория B дает возможность управлять легковым автомобилем, небольшими грузовиками, микроавтобусами, соответствующие некоторым требованиям.
                                 li.you-get__categories-list-item - Обладатели категории B автоматически получают категорию B1
             section.faq
+                .faq__header 
+                    h2.faq__header-title.section-title Остались вопросы?
+                    p.faq__header-subtitle.section-subtitle здесь ты найдёшь ответы
                 .container 
-                    .faq__header 
-                        h2.faq__header-title.section-title Остались вопросы?
-                        p.faq__header-subtitle.section-subtitle здесь ты найдёшь ответы
-                    .faq__accordeon                     
+                    .faq__accordion
+                        h3.faq__accordion-title А кто может быть участником марафона?
+                        .faq__accordion-content
+                            p.faq__accordion-content-text Участником марафона может быть любой гражданин РК достигший 16 лет.
+                        h3.faq__accordion-title Сколько всего длится марафон?
+                        .faq__accordion-content
+                            p.faq__accordion-content-text Марафон проводится четыре дня с 22 по 25 марта
+                        h3.faq__accordion-title Сколько стоит участие в марафоне?
+                        .faq__accordion-content
+                            p.faq__accordion-content-text Для новых участников у нас специальная цена - 11 300 ₸ 
+                        h3.faq__accordion-title Что я получу от марафона?
+                        .faq__accordion-content
+                            p.faq__accordion-content-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores reiciendis iste suscipit eveniet. Rem ratione fugiat expedita?
+                        h3.faq__accordion-title Как будет проводится марафон?
+                        .faq__accordion-content
+                            p.faq__accordion-content-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ad nulla dolore laudantium voluptatum, architecto praesentium nostrum                   
             section.join-us
 
         footer.footer
+        script(type="text/javascript", src="js/script.js")

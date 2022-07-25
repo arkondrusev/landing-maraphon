@@ -86,16 +86,17 @@ function copyDirContent(source, target) {
     .pipe(dest(target));
 }
 
-function watchPaths() {
+function watchPaths(cb) {
   for (const key of copyPaths.keys()) {
     watch(key,
       {ignoreInitial: false},
       function(cb) {
-        copyDirContent(key, copyPaths.get(key))
+        copyDirContent(key, copyPaths.get(key));
         cb();
       }
     );
   }
+  cb();
 }
 
 exports.default =
