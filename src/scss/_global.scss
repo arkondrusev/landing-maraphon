@@ -9,8 +9,6 @@ body {
     margin: 0 15%;
 }
 
-// mixins
-
 .section-title {
     @include montserrat-bold;
     font-size: 36px;
@@ -22,4 +20,105 @@ body {
     @include montserrat-light;
     font-size: 26px;
     line-height: 32px;
+}
+
+// mixins
+//join button
+.btn-join {
+    display: block;        
+    background: #B0BA3D;
+    border-radius: 5%/50%;
+    width: 228px;
+    height: 64px;
+    position: relative;
+
+    &::before {
+        content:"";
+        background: #D9E454;
+        border-radius: 5%/50%;
+        box-shadow: 0px 0px 11px #D9E454;
+        width: 228px;
+        height: 64px;
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        z-index: 1;
+    }
+
+    &::after {
+        content:"";
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 48.33%, rgba(255, 255, 255, 0) 100%);
+        filter: blur(30px);
+        width: 189px;
+        height: 64px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 3px;
+        z-index: 2;
+    }
+
+    &__text {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -70%);
+        @include montserrat-semibold;
+        font-style: 14px;
+        letter-spacing: 0.1em;
+        color: $grey-color;
+        text-transform: uppercase;
+    }
+}
+
+// discount text near join btn
+
+.join-discount-container {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    width: 400px;
+
+    &__text {
+        @include century-gothic-normal;
+        font-style: 14px;
+        line-height: 20px;
+        position: relative;
+        text-align: left;
+        margin-left: 120px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        & span {
+            font-weight: 700;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../images/intro-arrow.svg") no-repeat center;
+            width: 118px;
+            height: 22px;
+            left: -100px;
+            top: 55px;
+        }
+    }
+
+    &__discount {
+        @include century-gothic-bold;
+        position: absolute;
+        left: 275px;
+        top: -25px;
+        width: 90px;
+        height: 30px;
+        transform: rotate(20deg);
+        border: solid 1px white;
+        line-height: 30px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: line-through;
+        text-decoration-color: red;
+    }
 }

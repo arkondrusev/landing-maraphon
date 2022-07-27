@@ -11,8 +11,7 @@
     z-index: 1;
 
     &__title {
-        font-family: Montserrat;
-        font-weight: 700;
+        @include montserrat-bold;
         font-size: 13px;
         text-align: right;
         & span {
@@ -137,53 +136,8 @@
     }
 
     &__row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 500px;
-
-        &-text-container {
-            position: relative;
-        }
-
-        &-text {
-            @include century-gothic-normal;
-            font-style: 14px;
-            line-height: 20px;
-            position: relative;
-    
-            & span {
-                font-weight: 700;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                background: url("../images/intro-arrow.svg") no-repeat center;
-                width: 118px;
-                height: 22px;
-                left: -80px;
-                top: 55px;
-            }
-    
-        }
-
-        &-discount {
-            @include century-gothic-bold;
-            position: absolute;
-            left: 165px;
-            top: -25px;
-            width: 90px;
-            height: 30px;
-            transform: rotate(20deg);
-            border: solid 1px white;
-            line-height: 30px;
-            border-radius: 15px;
-            text-align: center;
-            text-decoration: line-through;
-            text-decoration-color: red;
-        }
-
+        position: relative;
+        width: fit-content;
     }
 
 

@@ -1,3 +1,12 @@
+mixin btnjoin
+    a.btn-join(href="#")
+        p.btn-join__text участвовать
+
+mixin join-discount-container 
+    .join-discount-container
+        p.join-discount-container__text Участие в марафоне<br/>абсолютно <span>бесплатно</span>    
+        p.join-discount-container__discount &nbsp;15 000₸&nbsp;
+
 doctype html
 html(lang='ru')
     head
@@ -28,11 +37,8 @@ html(lang='ru')
                     .intro__rect
                         p.intro__rect-text Обучение проходит онлайн в нашем сервисе видео-уроков.
                     .intro__row
-                        a.intro__btn-join(href="#")
-                            p.intro__btn-join-text участвовать
-                        .intro__row-text-container
-                            p.intro__row-text Участие в марафоне<br/>абсолютно <span>бесплатно</span>    
-                            p.intro__row-discount &nbsp;15 000₸&nbsp;
+                        +btnjoin
+                        +join-discount-container
                     img.intro__sign2-img(src="images/novice-sign.png", alt="Заблюреный декоративный знак ученик", width="113", height="99")
                 img.intro__sign-img(src="images/road-sign.png", alt="Заблюреный декоративный дорожный знак", width="220", height="220")
             section.tasks
@@ -116,12 +122,9 @@ html(lang='ru')
                     p.join-us__header-subtitle.section-subtitle жми кнопку и регистрируйся на марафон
                 p.join-us__text Дата начала марафона <span>20 мая / 20:00</span>, осталось:
                 .join-us__timer
-                .join-us__btn-row.btn-set-join
-                    
-                    a.intro__btn-join(href="#")
-                        p.intro__btn-join-text участвовать
-                    .intro__row-text-container
-                        p.intro__row-text Участие в марафоне<br/>абсолютно <span>бесплатно</span>    
-                        p.intro__row-discount &nbsp;15 000₸&nbsp;
+                .join-us__btns
+                    a.join-us__btns-inst(href="#")
+                    +btnjoin
+                    +join-discount-container
         footer.footer
         script(type="text/javascript", src="js/script.js")
